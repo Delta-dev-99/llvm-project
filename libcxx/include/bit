@@ -158,7 +158,7 @@ int __countl_zero(_Tp __t) _NOEXCEPT
         int __iter = 0;
         const unsigned int __ulldigits = numeric_limits<unsigned long long>::digits;
         while (true) {
-            __t = __rotr(__t, __ulldigits);
+            __t = __rotl(__t, __ulldigits);
             if ((__iter = __countl_zero(static_cast<unsigned long long>(__t))) != __ulldigits)
                 break;
             __ret += __iter;
